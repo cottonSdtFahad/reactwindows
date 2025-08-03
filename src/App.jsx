@@ -1,10 +1,15 @@
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { ModalProvider } from "./contexts/ModalContext";
+import WindowsDesktop from "./components/WindowsDesktop";
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <div className="text-3xl font-bold text-blue-600">React Windows</div>
-    </>
+    <ThemeProvider>
+      <ModalProvider>
+        <WindowsDesktop />
+      </ModalProvider>
+    </ThemeProvider>
   );
 }
 
